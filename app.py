@@ -16,6 +16,9 @@ def atm_menu(name):
 balance = 0
 print("          === Automated Teller Machine ===          ")
 name = input("Enter name to regiser: ")
+while len(name) < 1 or len(name) > 10:
+    print("try again")
+    name = input("Enter name to regiser: ")
 pin = input("Enter PIN:  ")
 
 print(f" {name} has been regisered with a starting balance of ${balance}")
